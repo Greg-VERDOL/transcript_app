@@ -2,7 +2,7 @@ import streamlit as st
 import whisper
 import os
 
-model = whisper.load_model("small")
+model = whisper.load_model("base")
 
 def transcribe_file(file):
     abs_file = os.path.abspath(file)
