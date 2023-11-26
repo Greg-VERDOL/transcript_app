@@ -1,7 +1,6 @@
 import streamlit as st
 import whisper
 import os
-import shutil
 
 model = whisper.load_model("small")
 
