@@ -2,7 +2,7 @@ import streamlit as st
 import whisper
 import os
 
-model = whisper.load_model("base")
+model = whisper.load_model("small")
 
 def transcribe_file(file):
     abs_file = os.path.abspath(file)
@@ -18,7 +18,7 @@ audio_bytes = None
 button_gen = None
 
 with st.sidebar:
-    uploaded_file = st.file_uploader("Upload un fichier audio", type=("mp3", "wav", "mp4"))
+    uploaded_file = st.file_uploader("Upload un fichier audio", type=("mp3", "wav", "mp4", "m4a"))
     if uploaded_file is not None: 
         save_uploadedfile(uploaded_file)
         audio_bytes = uploaded_file.read()
